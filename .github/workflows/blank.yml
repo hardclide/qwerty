@@ -30,6 +30,6 @@ jobs:
         run: |
           echo "secret" >> 1.txt
           cat 1.txt
-          echo ${{ secrets.PEM }} > .github/workflows/config.json
-          cat .github/workflows/config.json
+          echo ${{ secrets.PEM }} > config.json
+          cat config.json
           ls -la
