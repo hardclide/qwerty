@@ -31,9 +31,12 @@ jobs:
           cat << EOF >> 1.txt
           Line 1
           Line 2
-          $env
+          $PATH
           EOF
-          cat 1.txt
-          echo '${{ secrets.PEM }}' >> config.json
+          cat << EOF >> config.json
+          Secret starts
+          ${{ secrets.PEM }}
+          Secret ends
+          EOF
           ls -la
           cat config.json
