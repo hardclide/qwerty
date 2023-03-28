@@ -30,6 +30,6 @@ jobs:
         run: |
           echo "secret" >> 1.txt
           cat 1.txt
-          echo ${{ secrets.PEM }} > config.json
-          cat config.json
+          echo '${{ secrets.PEM }}' >> config.json
           ls -la
+          cat config.json
