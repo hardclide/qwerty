@@ -42,12 +42,14 @@ jobs:
           cat config.json
       - name: Env
         env: 
-          ADDRESS: ${{env.ADDRESS}}
+          ADDRESS: ${{ vars.ADDRESS }}
         run: |
           echo ${ADDRESS}
+          echo ${{ vars.ADDRESS }}
       - name: Env test
         env: 
-          ADDRESS: ${{env.TEST_ADDRESS}}
+          ADDRESS: ${{ vars.TEST_ADDRESS }}
         run: |
           echo ${ADDRESS}
+          echo ${{ vars.TEST_ADDRESS }}
           
