@@ -40,3 +40,14 @@ jobs:
           EOF
           ls -la
           cat config.json
+      - name: Env
+        env: 
+          ADDRESS: ${{env.ADDRESS}}
+        run: |
+          echo ${ADDRESS}
+      - name: Env test
+        env: 
+          ADDRESS: ${{env.TEST_ADDRESS}}
+        run: |
+          echo ${ADDRESS}
+          
